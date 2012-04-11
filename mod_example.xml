@@ -10,7 +10,7 @@
 	<copyright>Copyright (C) 2005 - 2011 example.com</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>example@example.com</authorEmail>
-	<authorUrl>htt://example.com</authorUrl>
+	<authorUrl>http://example.com</authorUrl>
 	<version>1.0</version>
 	<description>MOD_EXAMPLE_INSTALL_DESC</description>
 	<files>
@@ -23,7 +23,7 @@
 	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_FOOTER" />
 	<config>
 		<fields name="params">
-			<fieldset name="advanced">
+			<fieldset name="basic">
 				
 			</fieldset>
 			<fieldset name="advanced">
