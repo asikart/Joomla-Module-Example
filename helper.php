@@ -1,8 +1,8 @@
 <?php
 /**
- * @package		Joomla.Site
- * @subpackage	mod_articles_latest
- * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @package		Asikart Joomla! Extansion Example
+ * @subpackage	mod_example
+ * @copyright	Copyright (C) 2012 Asikart.com, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
