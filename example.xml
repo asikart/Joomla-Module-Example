@@ -19,6 +19,7 @@
 		<folder>language</folder>
 		<filename>index.html</filename>
 		<filename>mod_example.xml</filename>
+		<filename>helper.php</filename>
 	</files>
 	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_FOOTER" />
 	<config>
