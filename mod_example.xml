@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>mod_example</name>
+    <author>Asika</author>
+    <creationDate>2012-11-12</creationDate>
+    <copyright>Copyright (C) 2012 Asikart.com</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>asika@asikart.com</authorEmail>
+    <authorUrl>http://asikart.com</authorUrl>
+    <version>1.0</version>
+    <description>MOD_EXAMPLE_INSTALL_DESC</description>
+    
+    
+    <scriptfile>install.php</scriptfile>
+    
+    <!-- module example now has no sql file
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+          </sql>
+    </install>
+    
+    
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+          </sql>
+    </uninstall>
+    -->
+    
+    
+    <files>
+        <filename module="mod_example">mod_example.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <filename>index.html</filename>
+        <filename>mod_example.xml</filename>
+        <filename>helper.php</filename>
+        <filename>install.php</filename>
+    </files>
+    
+    
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_FOOTER" />
+    
+    
+    <config>
+        
+        <fields name="params">
+            
+            <fieldset name="basic">
+                
+                <field
+                    name="catid"
+                    type="category"
+                    description="JGLOBAL_CHOOSE_CATEGORY_DESC"
+                    extension="com_example"
+                    label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+                    required="true"
+                    multiple="true"
+                    size="10"
+                    default="1"
+                >
+                    <option value="1">JALL</option>
+                </field>
+                
+                <field
+                    type="spacer"
+                    hr="true"
+                />
+    
+                <field
+                    name="orderby"
+                    type="list"
+                    description="JGLOBAL_ARTICLE_ORDER_DESC"
+                    label="JGLOBAL_ARTICLE_ORDER_LABEL"
+                    default="a.created"
+                >
+                    <option value="a.created">JGLOBAL_CREATED_DATE</option>
+                    <option value="a.publish_up">MOD_EXAMPLE_PUBLISH_UP</option>
+                    <option value="a.publish_down">MOD_EXAMPLE_PUBLISH_DOWN</option>
+                    <option value="a.modified">JGLOBAL_FIELD_MODIFIED_LABEL</option>
+                    <option value="a.title">JGLOBAL_TITLE</option>
+                    <option value="a.ordering">JGLOBAL_ORDERING</option>
+                </field>
+                
+                <field
+                    name="order_dir"
+                    type="list"
+                    label="JFIELD_ORDERING_LABEL"
+                    description="JFIELD_ORDERING_DESC"
+                    default="DESC"
+                >
+                    <option value="ASC">MOD_EXAMPLE_ORDER_DIR_ASC</option>
+                    <option value="DESC">MOD_EXAMPLE_ORDER_DIR_DESC</option>
+                </field>
+                
+            </fieldset>
+            
+            <fieldset name="advanced">
+                
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+                
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                />
+                
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC"
+                >
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+                />
+                
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static"
+                >
+                    <option value="static"></option>
+                </field>
+                
+            </fieldset>
+            
+        </fields>
+        
+    </config>
+    
+    
+    <updateservers>
+        <!--<server type="collection">http://example.com/list.xml</server>-->
+        <server type="extension" priority="1" name="Asikart Example Module">http://update.asikart.com/module/mod_example.xml</server>
+    </updateservers>
+    
+    
+</extension>
